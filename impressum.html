@@ -139,6 +139,7 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
 
 
 /* ── MOBILE NAV ── */
+  nav { padding: 16px 20px; }
 @media (max-width: 768px) {
   .nav-links { display: none; }
   #burger { display: none; }
@@ -187,20 +188,13 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
     <a href="ueber_mich.html">Über mich</a>
     <a href="kontakt.html">Kontakt</a>
 </div>
-  <button id="burger" onclick="toggleMobileNav()" style="background:none;border:none;cursor:pointer;padding:8px;display:none;flex-direction:column;gap:5px;">
+  <button id="burger" onclick="toggleMobileNav()" style="background:none;border:none;cursor:pointer;padding:8px;display:none;flex-direction:column;gap:5px;-webkit-appearance:none;appearance:none;color:inherit;">
     <span style="display:block;width:25px;height:2px;background:currentColor;border-radius:2px;"></span>
     <span style="display:block;width:25px;height:2px;background:currentColor;border-radius:2px;"></span>
     <span style="display:block;width:25px;height:2px;background:currentColor;border-radius:2px;"></span>
   </button>
 </nav>
-<div id="mobileNav" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.95);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:28px;">
-  <button onclick="toggleMobileNav()" style="position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;color:#fff;font-size:36px;line-height:1;padding:0;">×</button>
-  <a href="startseite.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:32px;text-transform:uppercase;letter-spacing:.05em;color:#fff;text-decoration:none;">Startseite</a>
-  <a href="training.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:32px;text-transform:uppercase;letter-spacing:.05em;color:#fff;text-decoration:none;">Training</a>
-  <a href="kraulschwimmen.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:32px;text-transform:uppercase;letter-spacing:.05em;color:#fff;text-decoration:none;">Kraulschwimmen</a>
-  <a href="ueber_mich.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:32px;text-transform:uppercase;letter-spacing:.05em;color:#fff;text-decoration:none;">Über mich</a>
-  <a href="kontakt.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:32px;text-transform:uppercase;letter-spacing:.05em;color:#fff;text-decoration:none;">Kontakt</a>
-</div>
+
 
 </div>
 
@@ -292,3 +286,13 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
   <div class="footer-copy">© 2026 · Hamburg</div>
 </footer>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c
+<div id="mobileNav" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.95);z-index:9999;flex-direction:column;align-items:center;justify-content:center;gap:28px;">
+  <button onclick="toggleMobileNav()" style="position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;color:#fff;font-size:40px;line-height:1;padding:0;">×</button>
+  <a href="startseite.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Startseite</a>
+  <a href="training.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Krafttraining</a>
+  <a href="kraulschwimmen.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Kraulschwimmen</a>
+  <a href="ueber_mich.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Über mich</a>
+  <a href="kontakt.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Kontakt</a>
+</div>
+</body>
+</html>

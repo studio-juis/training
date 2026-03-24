@@ -109,6 +109,7 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
   /* FOOTER */
   footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; gap: 16px; }
   .footer-links { flex-wrap: wrap; gap: 12px; }
+  .footer-links { flex-wrap: wrap; gap: 12px; }
 
   /* PHILOSOPHY */
   .philosophy { padding: 32px 20px; }
@@ -294,5 +295,27 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
   <a href="ueber_mich.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Über mich</a>
   <a href="kontakt.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Kontakt</a>
 </div>
+<script>
+function checkWidth() {
+  var nav = document.getElementById('navLinks');
+  var burger = document.getElementById('burger');
+  if (!nav || !burger) return;
+  if (window.innerWidth <= 768) {
+    nav.style.display = 'none';
+    burger.style.display = 'flex';
+  } else {
+    nav.style.display = 'flex';
+    burger.style.display = 'none';
+  }
+}
+document.addEventListener('DOMContentLoaded', function() {
+  checkWidth();
+  window.addEventListener('resize', checkWidth);
+});
+function toggleMobileNav() {
+  var nav = document.getElementById('mobileNav');
+  if (nav) nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
 </body>
 </html>

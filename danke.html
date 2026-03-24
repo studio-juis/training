@@ -51,6 +51,12 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
   .nav-links { display: none; }
   #burger { display: none; }
 }
+
+@media (max-width: 768px) {
+  footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+  .footer-links { flex-direction: column; gap: 8px; }
+  .footer-links a { font-size: 12px; }
+}
 </style>
 
 </head>

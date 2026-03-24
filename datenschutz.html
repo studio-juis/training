@@ -27,7 +27,7 @@
 }
 body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--black); }
 
-nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; }
+nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
 .logo { display: flex; align-items: center; height: 28px; flex-shrink: 0; }
 .logo svg { height: 22px; width: auto; }
 .nav-links { display: flex; gap: 28px; align-items: center; flex-shrink: 0; }
@@ -139,7 +139,7 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
 
 
 /* ── MOBILE NAV ── */
-  nav { padding: 16px 20px; }
+  nav { padding: 16px 20px !important; }
 @media (max-width: 768px) {
   .nav-links { display: none; }
   #burger { display: none; }
@@ -274,7 +274,7 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
     <a href="impressum.html">Impressum</a>
     <a href="datenschutz.html">Datenschutz</a>
     <a href="kontakt.html">Kont
-<div id="mobileNav" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.95);z-index:9999;flex-direction:column;align-items:center;justify-content:center;gap:28px;">
+<div id="mobileNav" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#FF5C5C;z-index:9999;flex-direction:column;align-items:center;justify-content:center;gap:28px;">
   <button onclick="toggleMobileNav()" style="position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;color:#fff;font-size:40px;line-height:1;padding:0;">×</button>
   <a href="startseite.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Startseite</a>
   <a href="training.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Krafttraining</a>

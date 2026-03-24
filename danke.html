@@ -10,7 +10,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 :root { --coral: #FF5C5C; --gray-light: #E8E8E8; --gray-mid: #8A8A8A; --gray-dark: #4A4A4A; --white: #fff; --black: #111; }
 body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--black); min-height: 100vh; display: flex; flex-direction: column; }
-nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; }
 .logo { display: flex; align-items: center; height: 28px; flex-shrink: 0; }
 .logo svg { height: 22px; width: auto; }
 .main { flex: 1; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 80px 40px; max-width: 700px; }
@@ -103,7 +103,7 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
 
 <div class="main">
   <div class="section-label">Nachricht erhalten</div>
-  <div class="title">Vielen<br><em>Dank</em></div>
+  <div class="title" style="color:#8A8A8A;">Vielen<br><em style="color:rgba(0,0,0,0.2);">Dank</em></div>
   <div class="text">Ich habe deine Nachricht erhalten und melde mich innerhalb von 48 Stunden bei dir. Ich freue mich darauf, dich kennenzulernen!</div>
   <a href="startseite.html" class="btn">Zurück zur Startseite</a>
 </div>

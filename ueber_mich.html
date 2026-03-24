@@ -302,7 +302,7 @@ footer {
 /* ── MOBILE NAV ── */
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  #burger { display: flex; }
+  #burger { display: none; }
 }
 </style>
 
@@ -349,7 +349,7 @@ footer {
     <a href="ueber_mich.html" class="active">Über mich</a>
     <a href="kontakt.html">Kontakt</a>
 </div>
-  <button id="burger" onclick="toggleMobileNav()" style="background:none;border:none;cursor:pointer;padding:8px;display:flex;flex-direction:column;gap:5px;">
+  <button id="burger" onclick="toggleMobileNav()" style="background:none;border:none;cursor:pointer;padding:8px;display:none;flex-direction:column;gap:5px;">
     <span style="display:block;width:25px;height:2px;background:currentColor;border-radius:2px;"></span>
     <span style="display:block;width:25px;height:2px;background:currentColor;border-radius:2px;"></span>
     <span style="display:block;width:25px;height:2px;background:currentColor;border-radius:2px;"></span>
@@ -472,23 +472,27 @@ footer {
 
 
 
+
 <script>
 function checkWidth() {
   var nav = document.getElementById('navLinks');
-  if (!nav) return;
+  var burger = document.getElementById('burger');
+  if (!nav || !burger) return;
   if (window.innerWidth <= 768) {
-    nav.style.setProperty('display', 'none', 'important');
+    nav.style.display = 'none';
+    burger.style.display = 'flex';
   } else {
-    nav.style.setProperty('display', 'flex', 'important');
+    nav.style.display = 'flex';
+    burger.style.display = 'none';
   }
 }
-window.addEventListener('load', checkWidth);
-window.addEventListener('resize', checkWidth);
-checkWidth();
-
+document.addEventListener('DOMContentLoaded', function() {
+  checkWidth();
+  window.addEventListener('resize', checkWidth);
+});
 function toggleMobileNav() {
   var nav = document.getElementById('mobileNav');
-  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  if (nav) nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
 }
 </script>
 </body>

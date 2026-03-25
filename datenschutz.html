@@ -36,7 +36,7 @@ nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex;
 .nav-links a { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--gray-dark); text-decoration: none; }
 .nav-links a:hover { color: var(--black); }
 
-.page-header { padding: 52px 40px 40px; }
+.page-header { padding: 100px 40px 40px; }
 .page-header-label { font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--coral); margin-bottom: 12px; }
 .page-header-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; text-transform: uppercase; font-size: 64px; color: var(--black); line-height: 1.0; letter-spacing: .02em; }
 
@@ -109,7 +109,7 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
   .price-right { text-align: left; }
 
   /* FOOTER */
-  footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; gap: 16px; }
+  footer { padding: 24px 20px 32px; flex-direction: column; align-items: flex-start; gap: 16px; }
   .footer-links { flex-wrap: wrap; gap: 12px; }
   .footer-links { flex-wrap: wrap; gap: 12px; }
 
@@ -144,8 +144,8 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
 /* ── MOBILE NAV ── */
   nav { padding: 16px 20px !important; }
 @media (max-width: 768px) {
-  .nav-links { display: none; }
-  #burger { display: none; }
+  .nav-links { display: none !important; }
+  #burger { display: flex !important; }
 }
 </style>
 
@@ -276,7 +276,11 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
   <div class="footer-links">
     <a href="impressum.html">Impressum</a>
     <a href="datenschutz.html">Datenschutz</a>
-    <a href="kontakt.html">Kont
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+  <div class="footer-copy">© 2026 · Hamburg</div>
+</footer>
+
 <div id="mobileNav" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#FF5C5C;z-index:9999;flex-direction:column;align-items:center;justify-content:center;gap:28px;">
   <button onclick="toggleMobileNav()" style="position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;color:#fff;font-size:40px;line-height:1;padding:0;">×</button>
   <a href="startseite.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Startseite</a>

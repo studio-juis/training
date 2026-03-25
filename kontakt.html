@@ -39,7 +39,7 @@ nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex;
 
 .page-header {
   background: var(--coral);
-  padding: 52px 40px 64px;
+  padding: 100px 40px 64px;
 }
 .page-header-label {
   font-size: 11px; font-weight: 600; letter-spacing: .2em;
@@ -50,7 +50,7 @@ nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex;
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800; text-transform: uppercase;
   font-size: 72px; color: var(--white);
-  line-height: 1.0; letter-spacing: .02em;
+  line-height: 0.88; letter-spacing: .02em;
 }
 .page-header-title em { font-style: normal; color: rgba(255,255,255,.5); }
 
@@ -343,9 +343,9 @@ footer {
   <div class="contact-grid">
 
     <div class="contact-info">
-      <div class="section-label">Schreib mir</div>
-      <div class="section-title">Ich freue mich auf deine Nachricht.</div>
-      <div class="info-text">Füll das Formular aus und ich melde mich innerhalb von 48 Stunden bei dir — für ein kostenloses Erstgespräch oder um direkt einen Termin zu vereinbaren.</div>
+      <div class="section-label">Kontakt</div>
+      <div class="section-title">Bereit, wenn du es bist.</div>
+      <div class="info-text">Schreib mir — ich antworte innerhalb von 48 Stunden.</div>
       <div class="info-items">
         <div class="info-item">
           <div class="info-item-label">Trainerin</div>
@@ -396,16 +396,10 @@ footer {
           </select>
         </div>
 
-        <div class="form-row">
-          <label for="wunschtermin">Wunschtermin</label>
-          <input type="date" id="wunschtermin" name="wunschtermin">
-          <div class="form-hint">Falls du bereits einen Wunschtermin hast — ansonsten besprechen wir das gemeinsam</div>
-        </div>
-
         <button type="submit" class="btn-submit">Nachricht senden</button>
 
         <div class="form-disclaimer">
-          Mit dem Absenden stimmst du der Verarbeitung deiner Daten gemäß unserer Datenschutzerklärung zu.
+          Mit dem Absenden stimmst du der Verarbeitung deiner Daten gemäß unserer <a href="datenschutz.html" style="color: var(--gray-mid); text-decoration: underline;">Datenschutzerklärung</a> zu.
         </div>
 
         <div class="success-msg" id="successMsg">

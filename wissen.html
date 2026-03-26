@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <meta name="description" content="Trainings-ABC von Studio Juis Training Hamburg. Fachbegriffe aus Krafttraining und Kraulschwimmen einfach erklärt — für Einsteigerinnen und Fortgeschrittene.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Julia Soldatke">
+  <meta property="og:title" content="Trainings-ABC · Studio Juis Training Hamburg">
+  <meta property="og:description" content="Fachbegriffe aus Krafttraining und Kraulschwimmen einfach erklärt. Von Atemtechnik bis Zugübungen.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <link rel="canonical" href="https://www.studiojuistraining.de/wissen.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Trainings-ABC · Studio Juis Training Hamburg",
+    "description": "Fachbegriffe aus Krafttraining und Kraulschwimmen einfach erklärt.",
+    "author": { "@type": "Person", "name": "Julia Soldatke" },
+    "url": "https://www.studiojuistraining.de/wissen.html"
+  }
+  </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trainings-ABC · Studio Juis Training Hamburg</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --coral: #FF5C5C;
+  --gray-dark: #4A4A4A;
+  --gray-mid: #8A8A8A;
+  --gray-light: #E8E8E8;
+  --gray-ice: #F5F5F5;
+  --white: #ffffff;
+  --black: #111111;
+  --blue: #185FA5;
+  --green: #3B6D11;
+}
+body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--black); }
+
+/* ── NAV ── */
+nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; }
+.logo { display: flex; align-items: center; height: 28px; flex-shrink: 0; }
+.logo svg { height: 22px; width: auto; }
+.nav-links { display: flex; gap: 28px; align-items: center; flex-shrink: 0; }
+.nav-links a { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.8); text-decoration: none; }
+.nav-links a:hover { color: #fff; }
+.nav-links a.active { color: #fff; border-bottom: 2px solid rgba(255,255,255,.5); padding-bottom: 2px; }
+
+/* ── PAGE HEADER ── */
+.page-header {
+  background: var(--coral);
+  padding: 100px 40px 64px;
+}
+.page-header-label {
+  font-size: 11px; font-weight: 600; letter-spacing: .2em;
+  text-transform: uppercase; color: rgba(255,255,255,.75);
+  margin-bottom: 12px;
+}
+.page-header-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800; text-transform: uppercase;
+  font-size: 72px; color: var(--white);
+  line-height: 0.88; letter-spacing: .02em;
+}
+.page-header-title em { font-style: normal; color: rgba(255,255,255,.5); }
+.page-header-sub {
+  margin-top: 20px;
+  font-size: 16px; font-weight: 300; color: rgba(255,255,255,.85);
+  max-width: 560px; line-height: 1.7;
+}
+
+/* ── FILTER BAR ── */
+.filter-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-light);
+  padding: 20px 40px;
+  display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+  position: sticky; top: 0; z-index: 5;
+}
+.filter-label {
+  font-size: 10px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .15em; color: var(--gray-mid); margin-right: 4px;
+}
+.filter-btn {
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .08em; padding: 6px 14px; border-radius: 20px;
+  border: 1.5px solid var(--gray-light); background: var(--white);
+  color: var(--gray-dark); cursor: pointer; transition: all .18s;
+}
+.filter-btn:hover { border-color: var(--coral); color: var(--coral); }
+.filter-btn.active { background: var(--coral); border-color: var(--coral); color: var(--white); }
+
+
+
+/* ── MAIN CONTENT ── */
+.main { width: 100%; padding: 40px 40px 80px; }
+
+
+
+/* ── LETTER SECTION ── */
+.letter-section { margin-bottom: 48px; }
+.letter-heading {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800; font-size: 56px; text-transform: uppercase;
+  color: var(--gray-light); line-height: 1;
+  border-bottom: 2px solid var(--gray-light);
+  padding-bottom: 4px; margin-bottom: 16px;
+  letter-spacing: .02em;
+}
+
+/* ── TERM GRID ── */
+.term-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+.term-card {
+  background: var(--white);
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  padding: 20px 22px;
+  transition: box-shadow .18s, transform .18s;
+}
+.term-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+  transform: translateY(-1px);
+}
+.term-card.hidden { display: none; }
+
+.term-badge {
+  font-size: 9px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .1em; padding: 3px 8px; border-radius: 20px;
+  display: inline-block; margin-top: 12px;
+}
+.term-badge.kf, .term-badge.sw, .term-badge.both { background: var(--gray-light); color: var(--gray-dark); }
+
+.term-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 20px; text-transform: uppercase;
+  letter-spacing: .02em; color: var(--black); line-height: 1.1;
+  margin-bottom: 8px;
+}
+.term-def {
+  font-size: 14px; font-weight: 300; color: var(--gray-dark);
+  line-height: 1.65;
+}
+
+/* ── EMPTY STATE ── */
+.empty-state {
+  display: none; text-align: center; padding: 60px 20px;
+  color: var(--gray-mid); font-size: 15px; font-weight: 300;
+}
+
+
+
+/* ── FOOTER ── */
+footer { background: var(--gray-light); padding: 28px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-logo { display: flex; align-items: center; height: 22px; flex-shrink: 0; }
+.footer-logo svg { height: 18px; width: auto; }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { font-size: 11px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--gray-dark); text-decoration: none; }
+.footer-links a:hover { color: var(--black); }
+.footer-copy { font-size: 11px; color: var(--gray-mid); }
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  nav { padding: 16px 20px; }
+  .page-header { padding: 80px 20px 48px; }
+  .page-header-title { font-size: 52px; }
+  .filter-bar { padding: 16px 20px; }
+  .alpha-nav { padding: 12px 20px 0; }
+  .main { padding: 32px 20px 60px; }
+  .cta-banner { padding: 48px 20px; }
+  .cta-banner h2 { font-size: 32px; }
+  footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; gap: 16px; }
+  .footer-links { flex-wrap: wrap; gap: 12px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <svg style="fill:#111111;" id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284.79 32.27">
+  <g id="Logo">
+    <g>
+      <path d="M20.24,19.22v-8.33s-2.63,0-2.63,0v-3.9s2.64,0,2.64,0v-3.46s4.84-1.08,4.84-1.08v4.54s4.97,0,4.97,0v3.9s-4.98,0-4.98,0v8.26c0,1.55.75,2.06,1.61,2.06,1.15,0,2.16-.65,2.31-.76l1.37,3.57c-1.08.72-2.67,1.37-4.58,1.37-3.61,0-5.55-2.1-5.55-6.17Z"/>
+      <path d="M0,23.51l1.73-3.71c1.23.94,2.92,1.91,5.63,1.92,1.12,0,2.96-.43,2.96-1.51,0-1.08-1.55-1.34-3.1-1.77-3.57-.94-6.49-2.13-6.49-5.6,0-3.68,3.61-5.62,7-5.62,2.96,0,4.83.73,6.71,1.81l-1.63,3.61c-1.77-.87-3.43-1.27-5.01-1.27-1.12,0-2.16.5-2.17,1.26,0,1.01,1.51,1.34,3.17,1.7,3.07.72,6.42,2.06,6.42,5.74,0,4.44-4.51,5.91-7.87,5.91-3.86,0-6.35-1.52-7.36-2.46Z"/>
+      <path d="M33.4,18.38V7.6s4.84,0,4.84,0v10.14c-.01,2.52,1.07,3.68,3.31,3.68,2.52,0,3.75-2.13,3.76-4.58V7.61s4.84,0,4.84,0v18.04s-4.56,0-4.56,0v-2.52c-1.08,1.77-3.54,2.88-5.63,2.88-4.98,0-6.56-2.93-6.56-7.62Z"/>
+      <path d="M53.36,16.63c0-5.19,3.25-9.38,8.23-9.37,2.09,0,4.15.83,5.44,2.38V1.82s4.84,0,4.84,0l-.02,23.84h-4.58s0-2.17,0-2.17c-1.3,1.73-3.61,2.52-5.77,2.52-4.98,0-8.15-4.19-8.14-9.38ZM67.04,16.64c0-2.81-1.8-4.91-4.29-4.91-2.6,0-4.47,2.09-4.48,4.9,0,2.85,1.87,4.91,4.47,4.91,2.49,0,4.29-2.02,4.3-4.9Z"/>
+      <rect x="76.44" y="7.64" width="4.83" height="18.04"/>
+      <path d="M84.91,16.66c0-5.23,4.26-9.38,9.64-9.37,5.41,0,9.66,4.16,9.66,9.39,0,5.23-4.26,9.37-9.67,9.37-5.37,0-9.63-4.16-9.62-9.39ZM99.27,16.67c0-2.81-2.02-4.91-4.72-4.91-2.71,0-4.73,2.09-4.73,4.9,0,2.85,2.02,4.91,4.72,4.91,2.71,0,4.73-2.05,4.73-4.9Z"/>
+      <path d="M110.82,28.84c2.13-1.15,3-3.35,3-5.91V7.67s4.85,0,4.85,0v14.54c-.02,5.27-2.22,8.22-6.15,10.06l-1.69-3.43Z"/>
+      <path d="M122.98,18.46V7.67s4.84,0,4.84,0v10.14c-.01,2.52,1.07,3.68,3.31,3.68,2.52,0,3.75-2.12,3.76-4.58V7.68s4.84,0,4.84,0v18.04s-4.56,0-4.56,0v-2.52c-1.08,1.77-3.54,2.88-5.63,2.88-4.98,0-6.56-2.93-6.56-7.62Z"/>
+      <path d="M153.18,23.64l1.73-3.71c1.23.94,2.92,1.91,5.63,1.92,1.12,0,2.96-.43,2.96-1.51,0-1.08-1.55-1.34-3.1-1.77-3.57-.94-6.49-2.13-6.49-5.6,0-3.68,3.61-5.62,7-5.62,2.96,0,4.83.73,6.71,1.81l-1.63,3.61c-1.77-.87-3.43-1.27-5.01-1.27-1.12,0-2.16.5-2.17,1.26,0,1.01,1.51,1.34,3.17,1.7,3.07.72,6.42,2.06,6.42,5.74,0,4.44-4.51,5.91-7.87,5.91-3.86,0-6.35-1.52-7.36-2.46Z"/>
+      <circle cx="78.86" cy="2.6" r="2.6"/>
+      <circle cx="116.33" cy="2.64" r="2.6"/>
+      <circle cx="147.01" cy="2.6" r="2.6"/>
+      <path d="M144.6,7.69h4.83s-.01,18.04-.01,18.04h-4.83s.01-18.04.01-18.04Z"/>
+    </g>
+    <g>
+      <path d="M191.74,4.71h10.54v3.1h-3.57v18.6h-3.41V7.81h-3.57v-3.1Z"/>
+      <path d="M212.2,26.41c-.19-.56-.31-.9-.31-2.67v-3.41c0-2.02-.68-2.76-2.23-2.76h-1.18v8.84h-3.41V4.71h5.15c3.53,0,5.05,1.64,5.05,4.99v1.71c0,2.23-.71,3.66-2.23,4.37v.06c1.71.71,2.26,2.33,2.26,4.59v3.35c0,1.05.03,1.83.37,2.64h-3.47ZM208.48,7.81v6.67h1.33c1.27,0,2.05-.56,2.05-2.29v-2.14c0-1.55-.53-2.23-1.74-2.23h-1.64Z"/>
+      <path d="M230.14,26.41h-3.44l-.59-3.94h-4.19l-.59,3.94h-3.13l3.47-21.7h4.99l3.47,21.7ZM222.36,19.53h3.29l-1.61-10.98h-.06l-1.61,10.98Z"/>
+      <path d="M232.98,4.71h3.41v21.7h-3.41V4.71Z"/>
+      <path d="M242.85,10.69h-.06v15.72h-3.07V4.71h4.28l3.44,12.99h.06V4.71h3.04v21.7h-3.5l-4.19-15.72Z"/>
+      <path d="M253.88,4.71h3.41v21.7h-3.41V4.71Z"/>
+      <path d="M263.75,10.69h-.06v15.72h-3.07V4.71h4.28l3.44,12.99h.06V4.71h3.04v21.7h-3.5l-4.19-15.72Z"/>
+      <path d="M280.01,14.32h4.78v6.88c0,3.47-1.74,5.46-5.08,5.46s-5.08-1.98-5.08-5.46v-11.29c0-3.47,1.74-5.46,5.08-5.46s5.08,1.98,5.08,5.46v2.11h-3.22v-2.33c0-1.55-.68-2.14-1.77-2.14s-1.77.59-1.77,2.14v11.72c0,1.55.68,2.11,1.77,2.11s1.77-.56,1.77-2.11v-4h-1.55v-3.1Z"/>
+    </g>
+    <line x1="172.61" y1="16.1" x2="188.91" y2="16.1" fill="none" stroke="#111" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <a href="startseite.html">Startseite</a>
+    <a href="training.html">Krafttraining</a>
+    <a href="kraulschwimmen.html">Kraulschwimmen</a>
+    <a href="ueber_mich.html">Über mich</a>
+    <a href="wissen.html" class="active">Wissen</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+  <button id="burger" onclick="toggleMobileNav()" style="background:none;border:none;cursor:pointer;padding:8px;display:none;flex-direction:column;gap:5px;-webkit-appearance:none;appearance:none;color:#fff;">
+    <span style="display:block;width:25px;height:2px;background:currentColor;border-radius:2px;"></span>
+    <span style="display:block;width:25px;height:2px;background:currentColor;border-radius:2px;"></span>
+    <span style="display:block;width:25px;height:2px;background:currentColor;border-radius:2px;"></span>
+  </button>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-title">Trainings-<br><em>Wissen.</em></div>
+
+</div>
+
+<div class="filter-bar">
+  <span class="filter-label">Filtern:</span>
+  <button class="filter-btn active" data-filter="all" onclick="filterTerms('all', this)">Alle</button>
+  <button class="filter-btn kf" data-filter="kf" onclick="filterTerms('kf', this)">Krafttraining</button>
+  <button class="filter-btn sw" data-filter="sw" onclick="filterTerms('sw', this)">Kraulschwimmen</button>
+  <button class="filter-btn both" data-filter="both" onclick="filterTerms('both', this)">Allgemein</button>
+</div>
+
+
+<div class="main">
+  <div id="terms-container"></div>
+  <div class="empty-state" id="emptyState">Keine Begriffe in dieser Kategorie gefunden.</div>
+</div>
+
+
+
+<footer>
+  <div class="footer-logo"><svg style="fill:#111111;" id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284.79 32.27">
+  <g id="Logo"><g>
+      <path d="M20.24,19.22v-8.33s-2.63,0-2.63,0v-3.9s2.64,0,2.64,0v-3.46s4.84-1.08,4.84-1.08v4.54s4.97,0,4.97,0v3.9s-4.98,0-4.98,0v8.26c0,1.55.75,2.06,1.61,2.06,1.15,0,2.16-.65,2.31-.76l1.37,3.57c-1.08.72-2.67,1.37-4.58,1.37-3.61,0-5.55-2.1-5.55-6.17Z"/>
+      <path d="M0,23.51l1.73-3.71c1.23.94,2.92,1.91,5.63,1.92,1.12,0,2.96-.43,2.96-1.51,0-1.08-1.55-1.34-3.1-1.77-3.57-.94-6.49-2.13-6.49-5.6,0-3.68,3.61-5.62,7-5.62,2.96,0,4.83.73,6.71,1.81l-1.63,3.61c-1.77-.87-3.43-1.27-5.01-1.27-1.12,0-2.16.5-2.17,1.26,0,1.01,1.51,1.34,3.17,1.7,3.07.72,6.42,2.06,6.42,5.74,0,4.44-4.51,5.91-7.87,5.91-3.86,0-6.35-1.52-7.36-2.46Z"/>
+      <path d="M33.4,18.38V7.6s4.84,0,4.84,0v10.14c-.01,2.52,1.07,3.68,3.31,3.68,2.52,0,3.75-2.13,3.76-4.58V7.61s4.84,0,4.84,0v18.04s-4.56,0-4.56,0v-2.52c-1.08,1.77-3.54,2.88-5.63,2.88-4.98,0-6.56-2.93-6.56-7.62Z"/>
+      <path d="M53.36,16.63c0-5.19,3.25-9.38,8.23-9.37,2.09,0,4.15.83,5.44,2.38V1.82s4.84,0,4.84,0l-.02,23.84h-4.58s0-2.17,0-2.17c-1.3,1.73-3.61,2.52-5.77,2.52-4.98,0-8.15-4.19-8.14-9.38ZM67.04,16.64c0-2.81-1.8-4.91-4.29-4.91-2.6,0-4.47,2.09-4.48,4.9,0,2.85,1.87,4.91,4.47,4.91,2.49,0,4.29-2.02,4.3-4.9Z"/>
+      <rect x="76.44" y="7.64" width="4.83" height="18.04"/>
+      <path d="M84.91,16.66c0-5.23,4.26-9.38,9.64-9.37,5.41,0,9.66,4.16,9.66,9.39,0,5.23-4.26,9.37-9.67,9.37-5.37,0-9.63-4.16-9.62-9.39ZM99.27,16.67c0-2.81-2.02-4.91-4.72-4.91-2.71,0-4.73,2.09-4.73,4.9,0,2.85,2.02,4.91,4.72,4.91,2.71,0,4.73-2.05,4.73-4.9Z"/>
+      <path d="M110.82,28.84c2.13-1.15,3-3.35,3-5.91V7.67s4.85,0,4.85,0v14.54c-.02,5.27-2.22,8.22-6.15,10.06l-1.69-3.43Z"/>
+      <path d="M122.98,18.46V7.67s4.84,0,4.84,0v10.14c-.01,2.52,1.07,3.68,3.31,3.68,2.52,0,3.75-2.12,3.76-4.58V7.68s4.84,0,4.84,0v18.04s-4.56,0-4.56,0v-2.52c-1.08,1.77-3.54,2.88-5.63,2.88-4.98,0-6.56-2.93-6.56-7.62Z"/>
+      <path d="M153.18,23.64l1.73-3.71c1.23.94,2.92,1.91,5.63,1.92,1.12,0,2.96-.43,2.96-1.51,0-1.08-1.55-1.34-3.1-1.77-3.57-.94-6.49-2.13-6.49-5.6,0-3.68,3.61-5.62,7-5.62,2.96,0,4.83.73,6.71,1.81l-1.63,3.61c-1.77-.87-3.43-1.27-5.01-1.27-1.12,0-2.16.5-2.17,1.26,0,1.01,1.51,1.34,3.17,1.7,3.07.72,6.42,2.06,6.42,5.74,0,4.44-4.51,5.91-7.87,5.91-3.86,0-6.35-1.52-7.36-2.46Z"/>
+      <circle cx="78.86" cy="2.6" r="2.6"/>
+      <circle cx="116.33" cy="2.64" r="2.6"/>
+      <circle cx="147.01" cy="2.6" r="2.6"/>
+      <path d="M144.6,7.69h4.83s-.01,18.04-.01,18.04h-4.83s.01-18.04.01-18.04Z"/>
+    </g><g>
+      <path d="M191.74,4.71h10.54v3.1h-3.57v18.6h-3.41V7.81h-3.57v-3.1Z"/>
+      <path d="M212.2,26.41c-.19-.56-.31-.9-.31-2.67v-3.41c0-2.02-.68-2.76-2.23-2.76h-1.18v8.84h-3.41V4.71h5.15c3.53,0,5.05,1.64,5.05,4.99v1.71c0,2.23-.71,3.66-2.23,4.37v.06c1.71.71,2.26,2.33,2.26,4.59v3.35c0,1.05.03,1.83.37,2.64h-3.47ZM208.48,7.81v6.67h1.33c1.27,0,2.05-.56,2.05-2.29v-2.14c0-1.55-.53-2.23-1.74-2.23h-1.64Z"/>
+      <path d="M230.14,26.41h-3.44l-.59-3.94h-4.19l-.59,3.94h-3.13l3.47-21.7h4.99l3.47,21.7ZM222.36,19.53h3.29l-1.61-10.98h-.06l-1.61,10.98Z"/>
+      <path d="M232.98,4.71h3.41v21.7h-3.41V4.71Z"/>
+      <path d="M242.85,10.69h-.06v15.72h-3.07V4.71h4.28l3.44,12.99h.06V4.71h3.04v21.7h-3.5l-4.19-15.72Z"/>
+      <path d="M253.88,4.71h3.41v21.7h-3.41V4.71Z"/>
+      <path d="M263.75,10.69h-.06v15.72h-3.07V4.71h4.28l3.44,12.99h.06V4.71h3.04v21.7h-3.5l-4.19-15.72Z"/>
+      <path d="M280.01,14.32h4.78v6.88c0,3.47-1.74,5.46-5.08,5.46s-5.08-1.98-5.08-5.46v-11.29c0-3.47,1.74-5.46,5.08-5.46s5.08,1.98,5.08,5.46v2.11h-3.22v-2.33c0-1.55-.68-2.14-1.77-2.14s-1.77.59-1.77,2.14v11.72c0,1.55.68,2.11,1.77,2.11s1.77-.56,1.77-2.11v-4h-1.55v-3.1Z"/>
+    </g>
+    <line x1="172.61" y1="16.1" x2="188.91" y2="16.1" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg></div>
+  <div class="footer-links">
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+  <div class="footer-copy">© 2026 · Hamburg</div>
+</footer>
+
+<div id="mobileNav" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#FF5C5C;z-index:9999;flex-direction:column;align-items:center;justify-content:center;gap:28px;">
+  <button onclick="toggleMobileNav()" style="position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;color:#fff;font-size:40px;line-height:1;padding:0;">×</button>
+  <a href="startseite.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Startseite</a>
+  <a href="training.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Krafttraining</a>
+  <a href="kraulschwimmen.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Kraulschwimmen</a>
+  <a href="ueber_mich.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Über mich</a>
+  <a href="wissen.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Wissen</a>
+  <a href="kontakt.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;text-transform:uppercase;color:#fff;text-decoration:none;">Kontakt</a>
+</div>
+
+<script>
+// ── Term data ──────────────────────────────────────────────────────────────
+const terms = [
+  // A
+  { letter: 'A', name: 'Adaptation', cat: 'both', def: 'Die Anpassungsreaktion des Körpers auf einen Trainingsreiz. Der Körper wird nach einer Belastung nicht nur wiederhergestellt, sondern leistungsfähiger als zuvor — die Grundlage jedes Trainingsfortschritts.', link: null },
+  { letter: 'A', name: 'Atemtechnik', cat: 'sw', def: 'Beim Kraulschwimmen wird die Luft seitlich ausgeblasen, während der Kopf zum Einatmen kurz zur Seite dreht. Eine gleichmäßige Atemtechnik ist der Schlüssel zu einem entspannten Kraulrhythmus.', link: 'kraulschwimmen.html', linkText: 'Zum Kraulschwimmen' },
+  { letter: 'A', name: 'Ausbelastung', cat: 'kf', def: 'Bezeichnet das Trainieren bis an die Grenze der momentanen Leistungsfähigkeit in einem Satz. Ausbelastung ist ein wichtiger Reiz für Muskelwachstum — sollte aber gezielt und nicht bei jeder Übung eingesetzt werden.', link: 'training.html', linkText: 'Zum Krafttraining' },
+  // B
+  { letter: 'B', name: 'Beinschlag', cat: 'sw', def: 'Der kontinuierliche auf-ab-Schlag der Beine beim Kraulschwimmen. Er stabilisiert die Körperlage im Wasser und erzeugt zusätzlichen Vortrieb — dafür muss die Bewegung jedoch aus der Hüfte kommen, nicht aus dem Knie.', link: 'kraulschwimmen.html', linkText: 'Zum Kraulschwimmen' },
+  { letter: 'B', name: 'Beweglichkeit', cat: 'both', def: 'Die Fähigkeit, Gelenke in einem möglichst großen Bewegungsradius zu bewegen. Im Krafttraining sorgt gute Beweglichkeit für saubere Technik und schützt vor Verletzungen — beim Schwimmen ermöglicht sie einen weiten, effizienten Armzug.', link: null },
+  // C
+  { letter: 'C', name: 'Cool-down', cat: 'both', def: 'Die Abkühlphase am Ende einer Trainingseinheit. Leichte Bewegung und Dehnen helfen dem Körper, den Stoffwechsel herunterzufahren, den Herzschlag zu normalisieren und die Regeneration einzuleiten.', link: null },
+  // D
+  { letter: 'D', name: 'Durchhaltefähigkeit', cat: 'both', def: 'Die mentale und körperliche Fähigkeit, ein Training auch bei zunehmender Erschöpfung fortzuführen. Sie entwickelt sich mit wachsender Erfahrung und ist eng mit Motivation und Gewohnheit verknüpft.', link: null },
+  { letter: 'D', name: 'Deload-Woche', cat: 'kf', def: 'Eine bewusst leichtere Trainingswoche nach mehreren intensiven Wochen. Das Volumen und die Intensität werden reduziert, damit sich der Körper erholen kann — ohne das Training vollständig zu unterbrechen.', link: 'training.html', linkText: 'Zum Krafttraining' },
+  // E
+  { letter: 'E', name: 'Einheit', cat: 'both', def: 'Eine einzelne Trainingseinheit bezeichnet eine abgeschlossene Trainingsession — von Warm-up bis Cool-down. Abhängig vom Ziel dauert eine Einheit typischerweise 45 bis 90 Minuten.', link: null },
+  { letter: 'E', name: 'Ermüdung', cat: 'both', def: 'Vorübergehende Leistungsminderung als direkte Folge von Training. Kurzfristige Ermüdung ist normal und gewollt — chronische Ermüdung durch fehlende Regeneration hingegen bremst den Fortschritt.', link: null },
+  // F
+  { letter: 'F', name: 'Freihanteln', cat: 'kf', def: 'Kurz- oder Langhanteln, bei denen die Bewegung nicht durch eine Maschine geführt wird. Sie schulen die intermuskuläre Koordination und aktivieren stabilisierende Muskeln stärker als geführte Geräte.', link: 'training.html', linkText: 'Zum Krafttraining' },
+  { letter: 'F', name: 'Frequenz', cat: 'both', def: 'Gibt an, wie oft eine Muskelgruppe oder eine Bewegung pro Woche trainiert wird. Eine höhere Frequenz kann die Entwicklung beschleunigen — vorausgesetzt, die Regeneration hält Schritt.', link: null },
+  // G
+  { letter: 'G', name: 'Gewohnheit', cat: 'both', def: 'Regelmäßiges Training wird erst dann nachhaltig, wenn es zur Gewohnheit wird — also automatisch im Alltag verankert ist. Studien zeigen, dass es im Schnitt 60 bis 90 Tage dauert, bis eine neue Trainingsroutine stabil ist.', link: null },
+  { letter: 'G', name: 'Gleitlage', cat: 'sw', def: 'Die optimale, horizontale Körperposition im Wasser nach dem Abstoß oder einer kräftigen Zugphase. Eine gute Gleitlage minimiert den Wasserwiderstand und ist Grundlage eines energiesparenden Kraulstils.', link: 'kraulschwimmen.html', linkText: 'Zum Kraulschwimmen' },
+  // H
+  { letter: 'H', name: 'Hypertrophie', cat: 'kf', def: 'Das Wachstum der Muskelfasern als Anpassung auf Krafttraining. Hypertrophie entsteht, wenn Muskeln regelmäßig mit ausreichender Intensität und Volumen belastet werden — und anschließend gut regenerieren.', link: 'training.html', linkText: 'Zum Krafttraining' },
+  // I
+  { letter: 'I', name: 'Intensität', cat: 'both', def: 'Im Krafttraining beschreibt Intensität das verwendete Gewicht im Verhältnis zum Maximum (z. B. 70 % des 1RM). Im Ausdauersport steht sie für die Herzfrequenz oder Geschwindigkeit im Verhältnis zur maximalen Leistung.', link: null },
+  // J
+  { letter: 'J', name: 'Jahresplanung', cat: 'both', def: 'Die langfristige Strukturierung des Trainings über ein ganzes Jahr — mit Aufbauphasen, Intensivphasen und bewussten Regenerationswochen. Eine gute Jahresplanung verhindert Stagnation und beugt Überlastung vor.', link: null },
+  // K
+  { letter: 'K', name: 'Kabelzug', cat: 'kf', def: 'Ein Trainingsgerät mit einem verstellbaren Zugseil, das konstante Spannung während der gesamten Bewegung erzeugt. Kabelzüge eignen sich für vielseitige Übungen aus verschiedenen Winkeln.', link: 'training.html', linkText: 'Zum Krafttraining' },
+  { letter: 'K', name: 'Knochendichte', cat: 'kf', def: 'Die Dichte und Festigkeit des Knochenmaterials. Ab 40 nimmt die Knochendichte natürlich ab — regelmäßiges Krafttraining gilt als eine der wirksamsten Methoden, um diesem Prozess entgegenzuwirken.', link: 'training.html', linkText: 'Zum Krafttraining' },
+  { letter: 'K', name: 'Körperhaltung', cat: 'both', def: 'Die Ausrichtung von Wirbelsäule, Schultern und Becken in Ruhe und Bewegung. Gute Körperhaltung schützt die Gelenke, verbessert die Kraftübertragung und beugt Schmerzen im Rücken und Nacken vor.', link: null },
+  { letter: 'K', name: 'Kraul-Armzug', cat: 'sw', def: 'Die Zugphase beim Kraulschwimmen, bei der der Arm im Wasser von vorne nach hinten zieht. Ein langer, vollständiger Armzug — weit vorne eintauchen, tief ziehen — erzeugt den meisten Vortrieb.', link: 'kraulschwimmen.html', linkText: 'Zum Kraulschwimmen' },
+  // L
+  { letter: 'L', name: 'Leistungsfähigkeit', cat: 'both', def: 'Das individuelle Niveau, auf dem Kraft, Ausdauer, Koordination und Beweglichkeit zusammenwirken. Leistungsfähigkeit ist kein fester Wert — sie entwickelt sich kontinuierlich mit konsequentem Training und guter Regeneration.', link: null },
+  // M
+  { letter: 'M', name: 'Maschinen', cat: 'kf', def: 'Geführte Trainingsgeräte, die den Bewegungsweg vorgeben. Sie sind besonders für Einsteigerinnen geeignet, da sie die korrekte Technik erleichtern und das Verletzungsrisiko reduzieren.', link: 'training.html', linkText: 'Zum Krafttraining' },
+  { letter: 'M', name: 'Muskelmasse', cat: 'kf', def: 'Der Anteil an Muskeln an der Körperzusammensetzung. Ab 40 verliert der Körper ohne gezielten Reiz jährlich Muskelmasse (Sarkopenie). Krafttraining ist der wirksamste Weg, diese zu erhalten oder aufzubauen.', link: 'training.html', linkText: 'Zum Krafttraining' },
+  // N
+  { letter: 'N', name: 'Neuromuskuläre Koordination', cat: 'both', def: 'Das Zusammenspiel von Nervensystem und Muskeln bei der Ausführung von Bewegungen. Besonders zu Beginn des Trainings sind Kraftzuwächse vor allem auf verbesserte Koordination zurückzuführen — noch bevor Muskeln wachsen.', link: null },
+  // O
+  { letter: 'O', name: 'Overtraining', cat: 'both', def: 'Ein Zustand chronischer Überlastung, bei dem Trainingsreize und Erholung dauerhaft aus dem Gleichgewicht geraten. Symptome sind anhaltende Müdigkeit, Leistungsabfall und Stimmungsschwankungen. Die Lösung: gezielte Ruhephasen.', link: null },
+  // P
+  { letter: 'P', name: 'Pausen', cat: 'kf', def: 'Die Erholungszeit zwischen zwei Trainingssätzen. Kurze Pausen (30–60 Sek.) erhöhen den Stoffwechselreiz, lange Pausen (2–4 Min.) erlauben mehr Kraft für den nächsten Satz. Das Ziel bestimmt die optimale Pausenlänge.', link: 'training.html', linkText: 'Zum Krafttraining' },
+  { letter: 'P', name: 'Progression', cat: 'both', def: 'Das systematische Steigern der Trainingsanforderung — mehr Gewicht, mehr Wiederholungen, kürzere Pausen oder bessere Technik. Ohne Progression stagniert die Entwicklung: der Körper passt sich nur an neue Reize an.', link: null },
+  // Q
+  { letter: 'Q', name: 'Qualität vor Quantität', cat: 'both', def: 'Ein zentrales Trainingsprinzip: saubere Technik und kontrollierte Ausführung sind wichtiger als hohes Gewicht oder viele Wiederholungen. Wer Qualität priorisiert, macht langfristig mehr Fortschritt — und verletzt sich seltener.', link: null },
+  // R
+  { letter: 'R', name: 'Regeneration', cat: 'both', def: 'Die Erholungsphase nach dem Training, in der der Körper sich anpasst und stärker wird. Regeneration umfasst Schlaf, Ernährung und Ruhetage — und ist genauso wichtig wie das Training selbst.', link: null },
+  { letter: 'R', name: 'Rollbewegung', cat: 'sw', def: 'Die seitliche Rotation des Körpers um die Längsachse beim Kraulschwimmen. Die Rolle ermöglicht einen kraftvolleren Armzug und macht das Einatmen zur Seite einfacher und natürlicher.', link: 'kraulschwimmen.html', linkText: 'Zum Kraulschwimmen' },
+  { letter: 'R', name: 'RPE-Skala', cat: 'kf', def: 'Rating of Perceived Exertion — eine Skala von 1–10, auf der Sportlerinnen die empfundene Anstrengung einschätzen. Im modernen Krafttraining wird häufig RPE 7–9 angestrebt: herausfordernd, aber mit Reserve.', link: 'training.html', linkText: 'Zum Krafttraining' },
+  // S
+  { letter: 'S', name: 'Sätze & Wiederholungen', cat: 'kf', def: 'Ein Satz ist eine ununterbrochene Folge von Wiederholungen einer Übung. Typische Hypertrophiebereiche liegen bei 3–5 Sätzen mit 8–15 Wiederholungen pro Übung, je nach Ziel und Trainingsstand.', link: 'training.html', linkText: 'Zum Krafttraining' },
+  { letter: 'S', name: 'Schwimmbrett', cat: 'sw', def: 'Ein Hilfsmittel aus Schaumstoff, das die Beine beim Schwimmen anhebt und so das isolierte Training der Arme ermöglicht. Im Techniktraining hilft es, Armzug und Atemrhythmus unabhängig vom Beinschlag zu üben.', link: 'kraulschwimmen.html', linkText: 'Zum Kraulschwimmen' },
+  { letter: 'S', name: 'Stabilität', cat: 'both', def: 'Die Fähigkeit, eine Körperposition oder Gelenkstellung unter Belastung zu halten. Stabilität ist die Grundlage jeder Kraftübung und verhindert, dass unerwünschte Ausweichbewegungen entstehen.', link: null },
+  // T
+  { letter: 'T', name: 'Technik', cat: 'both', def: 'Die korrekte Ausführungsform einer Übung oder Bewegung. Saubere Technik ist die Voraussetzung für effektives Training und schützt gleichzeitig vor Überlastung und Verletzungen.', link: null },
+  { letter: 'T', name: 'Trainingsplan', cat: 'both', def: 'Eine strukturierte Übersicht über Übungen, Sätze, Wiederholungen und Trainingstage. Ein guter Trainingsplan passt zum individuellen Ziel, Fitnesslevel und Alltag — und wird regelmäßig angepasst.', link: null },
+  // Ü
+  { letter: 'Ü', name: 'Überlastungsprinzip', cat: 'kf', def: 'Ein Grundprinzip des Krafttrainings: der Körper passt sich nur an, wenn er mit einem Reiz konfrontiert wird, der über dem gewohnten Niveau liegt. Zu wenig Reiz = kein Fortschritt. Zu viel = Übertraining.', link: 'training.html', linkText: 'Zum Krafttraining' },
+  // V
+  { letter: 'V', name: 'Volumen', cat: 'kf', def: 'Die Gesamtmenge der geleisteten Arbeit — in der Regel berechnet als Sätze × Wiederholungen × Gewicht. Volumen ist einer der wichtigsten Faktoren für Muskelwachstum, muss aber mit ausreichend Regeneration balanciert werden.', link: 'training.html', linkText: 'Zum Krafttraining' },
+  // W
+  { letter: 'W', name: 'Warm-up', cat: 'both', def: 'Die Aufwärmphase vor dem Training. Sie erhöht die Körpertemperatur, aktiviert die beteiligten Muskelgruppen und bereitet das Nervensystem auf die bevorstehende Belastung vor — und senkt damit das Verletzungsrisiko.', link: null },
+  { letter: 'W', name: 'Wassergewöhnung', cat: 'sw', def: 'Die erste Phase im Schwimmtraining für Einsteigerinnen: Vertrauen ins Wasser aufbauen, das Auftriebsgefühl kennenlernen und erste Atemübungen. Eine gute Wassergewöhnung legt das Fundament für alle weiteren Techniklernschritte.', link: 'kraulschwimmen.html', linkText: 'Zum Kraulschwimmen' },
+  { letter: 'W', name: 'Wechseljahre & Sport', cat: 'kf', def: 'In den Wechseljahren verändert sich der Hormonhaushalt deutlich — Östrogen und Progesteron sinken, was Muskelabbau, Gewichtszunahme und Knochenschwund begünstigt. Regelmäßiges Kraft- und Ausdauertraining gilt als wirksamstes Mittel gegen diese Veränderungen.', link: 'training.html', linkText: 'Zum Krafttraining' },
+  // X
+  { letter: 'X', name: 'X-Faktor', cat: 'both', def: 'Der individuelle Unterschied im Ansprechen auf Training — genetisch beeinflusst, aber nicht entscheidend. Jeder Körper reagiert anders auf Reize, weshalb ein guter Trainingsplan immer individuell angepasst wird.', link: null },
+  // Y
+  { letter: 'Y', name: 'Yoga & Training', cat: 'both', def: 'Yoga ergänzt Kraft- und Schwimmtraining sinnvoll: Es verbessert Beweglichkeit, Atemkontrolle und Körperwahrnehmung. Besonders atemfokussierte Praktiken wie Pranayama können die Regeneration unterstützen.', link: null },
+  // Z
+  { letter: 'Z', name: 'Zieldefinition', cat: 'both', def: 'Ein klar formuliertes Trainingsziel ist die Grundlage jedes guten Plans. Konkrete Ziele — z. B. „in 12 Wochen 5 kg mehr beim Rudern" oder „erste 50-Meter-Kraulstrecke" — machen Fortschritt sichtbar und halten die Motivation hoch.', link: null },
+  { letter: 'Z', name: 'Zugübungen', cat: 'kf', def: 'Übungen, bei denen ein Gewicht in Richtung Körper gezogen wird — z. B. Rudern, Latziehen oder Bizepscurls. Zugübungen stärken den Rücken und die Rückseite der Schulter und sind ein wichtiges Gegengewicht zu drückenden Übungen.', link: 'training.html', linkText: 'Zum Krafttraining' },
+];
+
+// ── Render terms ──────────────────────────────────────────────────────────
+function renderTerms(filter) {
+  const container = document.getElementById('terms-container');
+  container.innerHTML = '';
+  const visible = filter === 'all' ? terms : terms.filter(t => t.cat === filter);
+  const grouped = {};
+  visible.forEach(t => {
+    if (!grouped[t.letter]) grouped[t.letter] = [];
+    grouped[t.letter].push(t);
+  });
+  const empty = document.getElementById('emptyState');
+  if (Object.keys(grouped).length === 0) {
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+  Object.keys(grouped).sort().forEach(letter => {
+    const sec = document.createElement('div');
+    sec.className = 'letter-section';
+    sec.id = 'letter-' + letter;
+    sec.innerHTML = '<div class="letter-heading">' + letter + '</div><div class="term-grid"></div>';
+    const grid = sec.querySelector('.term-grid');
+    grouped[letter].forEach(t => {
+      const badgeLabels = { kf: 'Krafttraining', sw: 'Kraulschwimmen', both: 'Allgemein' };
+      const card = document.createElement('div');
+      card.className = 'term-card';
+      card.innerHTML =
+        '<div class="term-name">' + t.name + '</div>' +
+        '<p class="term-def">' + t.def + '</p>' +
+        '<span class="term-badge ' + t.cat + '">' + badgeLabels[t.cat] + '</span>';
+      grid.appendChild(card);
+    });
+    container.appendChild(sec);
+  });
+}
+
+// ── Filter ────────────────────────────────────────────────────────────────
+function filterTerms(filter, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderTerms(filter);
+}
+
+// ── Mobile nav ────────────────────────────────────────────────────────────
+function checkWidth() {
+  var nav = document.getElementById('navLinks');
+  var burger = document.getElementById('burger');
+  if (!nav || !burger) return;
+  if (window.innerWidth <= 768) { nav.style.display = 'none'; burger.style.display = 'flex'; }
+  else { nav.style.display = 'flex'; burger.style.display = 'none'; }
+}
+function toggleMobileNav() {
+  var nav = document.getElementById('mobileNav');
+  if (nav) nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+}
+document.addEventListener('DOMContentLoaded', function() {
+  renderTerms('all');
+  checkWidth();
+  window.addEventListener('resize', checkWidth);
+});
+</script>
+</body>
+</html>

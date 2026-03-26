@@ -92,11 +92,15 @@ nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex;
 .card-tag { display: inline-block; background: var(--gray-ice); color: var(--black); font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
 .card-tag.accent { background: #FFF0F0; color: var(--coral); }
 
-/* CTA BANNER */
-.cta-banner { background: var(--coral); padding: 80px 40px; }
-.cta-banner .section-label { color: rgba(255,255,255,.7); }
-.cta-banner .section-title { color: var(--white); margin-bottom: 10px; }
-.cta-banner .section-body { color: rgba(255,255,255,.85); margin-bottom: 32px; }
+/* CTA BANNER → KACHEL */
+.cta-banner { background: var(--white); padding: 40px 40px 60px; }
+.cta-block {
+  background: var(--coral); border-radius: 16px;
+  padding: 56px 48px;
+}
+.cta-block .section-label { color: rgba(255,255,255,.7); }
+.cta-block .section-title { color: var(--white); margin-bottom: 10px; }
+.cta-block .section-body { color: rgba(255,255,255,.85); margin-bottom: 32px; }
 
 /* FOOTER */
 footer { background: var(--gray-light); padding: 28px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
@@ -223,11 +227,60 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
 }
 
 
+/* ── WISSEN TEASER ── */
+.wissen-teaser {
+  background: #ffffff;
+  padding: 0 40px 72px;
+}
+.wissen-card {
+  background: var(--white);
+  border-radius: 14px;
+  border: 1px solid #E8E8E8;
+  padding: 40px;
+  display: flex; flex-direction: column;
+  align-items: flex-start; gap: 0;
+}
+.wissen-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800; text-transform: uppercase;
+  font-size: 36px; color: var(--black);
+  line-height: 1.0; letter-spacing: .02em; margin-bottom: 12px;
+}
+.wissen-sub {
+  font-size: 14px; font-weight: 300;
+  color: var(--black); line-height: 1.75; margin-bottom: 20px;
+}
+.wissen-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
+.wissen-tag {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--gray-ice); border: 1px solid var(--gray-light);
+  border-radius: 6px; padding: 6px 12px;
+  font-size: 11px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--gray-dark);
+}
+.wissen-tag-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--coral); flex-shrink: 0;
+}
+.wissen-btn {
+  display: inline-block; white-space: nowrap;
+  background: var(--black); color: var(--white);
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .1em; text-decoration: none;
+  padding: 14px 30px; border-radius: 8px;
+  transition: opacity .18s;
+}
+.wissen-btn:hover { opacity: .75; }
+@media (max-width: 768px) {
+  .wissen-teaser { padding: 0 20px 48px; }
+  .wissen-card { padding: 24px 20px; }
+}
+
 /* ── MOBILE NAV ── */
   nav { padding: 16px 20px !important; }
 @media (max-width: 768px) {
-  .nav-links { display: none !important; }
-  #burger { display: flex !important; }
+  .nav-links { display: none; }
+  #burger { display: none; }
 }
 </style>
 
@@ -287,12 +340,12 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
   </video>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Personal Training · Hamburg</div>
     <div class="hero-headline">Stark.<br><em>Weiblich.</em><br>Jetzt.</div>
     <div class="hero-sub">Krafttraining für Frauen ab 40 — professionell begleitet, individuell angepasst, mit spürbaren Ergebnissen.</div>
-    <div class="dosb-badge">
-      <span class="dosb-badge-dot"></span>
-      <span class="dosb-badge-text">DOSB B-Lizenz zertifiziert</span>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;">
+      <div class="dosb-badge"><span class="dosb-badge-dot"></span><span class="dosb-badge-text">DOSB B-Lizenz zertifiziert</span></div>
+      <div class="dosb-badge"><span class="dosb-badge-dot"></span><span class="dosb-badge-text">Personal Training</span></div>
+      <div class="dosb-badge"><span class="dosb-badge-dot"></span><span class="dosb-badge-text">Hamburg</span></div>
     </div>
   </div>
 </div>
@@ -345,15 +398,20 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
         <div class="ks-phil-text">Langfristiger Muskelaufbau mit dem Prinzip der progressiven Überlastung führt zu einem gezielten trainingswirksamen Reiz und einer sichtbaren biologischen Anpassung.</div>
       </div>
     </div>
+    <div style="margin-top:28px;">
+      <a href="wissen.html" style="display:inline-block;background:var(--black);color:var(--white);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;padding:12px 24px;border-radius:8px;transition:opacity .18s;">Trainings-ABC →</a>
+    </div>
   </div>
   </div>
 
-  
+
 <div class="cta-banner">
+  <div class="cta-block">
   <div class="section-label">Bereit loszulegen?</div>
   <div class="section-title">Dein erstes Gespräch ist kostenlos.</div>
   <div class="section-body">Kein Druck, keine Verpflichtung — einfach kennenlernen und schauen, ob wir zusammenpassen.</div>
   <a href="kontakt.html"><button class="btn-primary">Jetzt Termin buchen</button></a>
+  </div>
 </div>
 
 <footer>

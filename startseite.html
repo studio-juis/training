@@ -173,8 +173,9 @@ nav.nav-light { background: rgba(255,255,255,.92); backdrop-filter: blur(8px); b
 
 @media (max-width: 768px) {
   html { scroll-snap-type: none; }
-  .scroll-segment { height: auto; min-height: unset; overflow: visible; }
-  .scroll-segment--hero { height: 100svh; }
+  .scroll-segment { height: auto; min-height: unset; overflow: visible; padding-top: 60px; padding-bottom: 60px; }
+  .scroll-segment--hero { height: 100svh; padding-top: 0; padding-bottom: 0; }
+  .scroll-dots { display: none; }
 }
 
 /* HERO */

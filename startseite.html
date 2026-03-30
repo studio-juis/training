@@ -212,13 +212,14 @@ nav.nav-light { background: rgba(255,255,255,.92); backdrop-filter: blur(8px); b
 /* CTA BANNER → KACHEL */
 .cta-banner { background: var(--white); padding: 40px 40px 60px; }
 .cta-block {
-  background: var(--coral); border-radius: 16px;
+  background: transparent; border-radius: 16px;
   padding: 56px 48px;
+  border: 1.5px solid var(--black);
 }
-.cta-block .section-label { color: rgba(255,255,255,.7); }
-.cta-block .section-title { color: var(--white); margin-bottom: 10px; }
-.cta-block .section-body { color: rgba(255,255,255,.85); margin-bottom: 32px; }
-.cta-block .btn-primary { color: var(--white); border-color: var(--white); }
+.cta-block .section-label { color: var(--coral); }
+.cta-block .section-title { color: var(--black); margin-bottom: 10px; }
+.cta-block .section-body { color: var(--black); margin-bottom: 32px; }
+.cta-block .btn-primary { color: var(--black); border-color: var(--black); }
 
 /* FOOTER */
 footer { background: var(--gray-light); padding: 28px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
@@ -324,17 +325,20 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 76px;
   color: var(--black);
-  letter-spacing: .03em;
-  margin-bottom: 10px;
+  letter-spacing: .02em;
+  line-height: 0.88;
+  margin-bottom: 16px;
 }
 .ks-intro-text {
-  font-size: 15px;
-  font-weight: 300;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 50px;
   color: var(--black);
-  line-height: 1.75;
-  max-width: 640px;
+  letter-spacing: .01em;
+  line-height: 1.1;
+  max-width: 100%;
 }
 .ks-phil-title {
   font-family: 'Barlow Condensed', sans-serif;
@@ -512,12 +516,11 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
 <section class="scroll-segment scroll-segment--philosophie" id="seg-1">
 <div class="seg-inner">
   <div class="kraftsport-phil" style="margin-bottom:0;">
-    <div class="section-label">Warum Kraftsport?</div>
-    <h2>Stärke ab 40 — genau jetzt richtig.</h2>
     <div class="ks-intro">
-      <p class="ks-intro-headline">Kraft als lebenslange Praxis</p>
-      <p class="ks-intro-text">Personalisiertes Training, spezialisiert entwickelt für die sich wandelnde Bedürfnisse von Frauen über 40. Wir konzentrieren uns auf Langlebigkeit, Knochengesundheit und funktionelle Kraft. Ich begleite hormonelle Veränderungen und körperliche Entwicklung mit Präzision und Fachwissen.</p>
+      <p class="ks-intro-headline">Stärke ab 40.<br>Genau jetzt richtig.</p>
+      <p class="ks-intro-text">Personalisiertes Training, spezialisiert entwickelt für die wandelnden Bedürfnisse von Frauen ab 40. Wir konzentrieren uns auf funktionelle Kraft, Knochengesundheit und Bewegungskompetenz.</p>
     </div>
+    <div class="section-label">Warum Kraftsport?</div>
     <div class="ks-phil-grid">
       <div>
         <div class="ks-phil-title">Knochendichte & Gesundheit</div>

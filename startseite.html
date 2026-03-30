@@ -145,11 +145,9 @@ body {
   50% { transform: translateX(-50%) translateY(6px); }
 }
 
-/* SEGMENT INNER — zentriertes Content-Padding */
+/* SEGMENT INNER — original padding wie .section */
 .seg-inner {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 0 40px;
 }
 
@@ -162,8 +160,8 @@ body {
 
 /* NAV */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; transition: background .3s; }
-.logo { display: flex; align-items: center; height: 36px; flex-shrink: 0; }
-.logo svg { height: 32px; width: auto; }
+.logo { display: flex; align-items: center; height: 24px; flex-shrink: 0; }
+.logo svg { height: 20px; width: auto; }
 .logo span { color: rgba(255,255,255,.6); }
 .nav-links { display: flex; gap: 28px; align-items: center; flex-shrink: 0; }
 .nav-links a { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.8); text-decoration: none; transition: color .3s; }
@@ -580,7 +578,7 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
 <!-- SEGMENT 5: CTA + FOOTER -->
 <section class="scroll-segment scroll-segment--cta" id="seg-4" style="height:auto;min-height:100vh;justify-content:space-between;flex-direction:column;">
 <div style="flex:1;display:flex;align-items:center;padding:40px;">
-  <div style="width:100%;max-width:1200px;margin:0 auto;">
+  <div style="width:100%">
   <div class="cta-block">
     <div class="section-label">Bereit loszulegen?</div>
     <div class="section-title">Dein erstes Gespräch ist kostenlos.</div>

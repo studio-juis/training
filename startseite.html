@@ -152,8 +152,8 @@ body {
 }
 
 /* SEGMENT-SPEZIFISCHE HINTERGRÜNDE */
-.scroll-segment--angebote { background: #ffffff; }
-.scroll-segment--philosophie { background: var(--gray-ice); }
+.scroll-segment--angebote { background: var(--gray-ice); }
+.scroll-segment--philosophie { background: #ffffff; }
 .scroll-segment--wissen { background: #ffffff; }
 .scroll-segment--cta { background: var(--white); }
 
@@ -202,7 +202,7 @@ nav.nav-light { background: rgba(255,255,255,.92); backdrop-filter: blur(8px); b
 
 /* CARDS */
 .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 32px; }
-.card { background: var(--white); border-radius: 14px; padding: 30px; border: 1px solid #E8E8E8; display: flex; flex-direction: column; }
+.card { background: var(--white); border-radius: 14px; padding: 30px; border: none; display: flex; flex-direction: column; }
 .card-tags { display: block; margin-bottom: 0; }
 .card-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: .02em; font-size: 24px; color: var(--black); margin-bottom: 10px; }
 .card-body { font-size: 14px; font-weight: 300; color: var(--black); line-height: 1.65; margin-bottom: 18px; }
@@ -456,10 +456,8 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
 <!-- SCROLL PROGRESS DOTS -->
 <div role="navigation" aria-label="Seitennavigation" class="scroll-dots" id="scrollDots">
   <button class="scroll-dot active" data-index="0" title="Hero" aria-label="Zur Hero-Sektion"></button>
-  <button class="scroll-dot" data-index="1" title="Angebote" aria-label="Zu den Angeboten"></button>
-  <button class="scroll-dot" data-index="2" title="Warum Kraftsport" aria-label="Zur Philosophie"></button>
-  <button class="scroll-dot" data-index="3" title="Wissen" aria-label="Zum Wissensbereich"></button>
-  <button class="scroll-dot" data-index="4" title="Kontakt" aria-label="Zum Kontakt"></button>
+  <button class="scroll-dot" data-index="1" title="Warum Kraftsport" aria-label="Zur Philosophie"></button>
+  <button class="scroll-dot" data-index="2" title="Angebote" aria-label="Zu den Angeboten"></button>
 </div>
 
 <!-- SEGMENT 1: HERO -->
@@ -490,44 +488,8 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
 
 
 
-<!-- SEGMENT 2: ANGEBOTE -->
-<section class="scroll-segment scroll-segment--angebote" id="seg-1">
-<div class="seg-inner">
-<div style="padding: 0;">
-  <div class="section-label">Angebote</div>
-  <div class="section-title">Was ich für dich tue.</div>
-  <div class="section-body">Zwei spezialisierte Programme — eines für den Kraftraum, eines für das Wasser. Beide mit persönlicher Begleitung und klarer Progression.</div>
-  <div class="cards">
-    <div class="card">
-      <div class="card-title">Krafttraining</div>
-      <div class="card-body">Einführung in den Kraftsport mit Maschinen, Kabelzügen, Freihanteln und Stangen. Individuelle Begleitung in der Progression — speziell für Frauen ab 40.</div>
-      <div class="card-tags">
-        <span class="card-tag accent">Frauen ab 40</span>
-        <span class="card-tag">Technik</span>
-        <span class="card-tag">Geräteeinweisung</span>
-        <span class="card-tag">Einsteigerinnen</span>
-      </div>
-      <a href="kontakt.html" style="display:inline-block;margin-top:24px;background:transparent;color:var(--coral);font-family:'Barlow',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:11px 24px;border-radius:8px;text-decoration:none;align-self:flex-start;border:1.5px solid var(--coral);">Buchen</a>
-    </div>
-    <div class="card">
-      <div class="card-title">Kraulschwimmen</div>
-      <div class="card-body">1:1 Schwimmtraining für Frauen — Kraulschwimmen von Grund auf erlernen. Von der Wassergewöhnung bis zur ersten Schwimmstrecke.</div>
-      <div class="card-tags">
-        <span class="card-tag accent">Einsteigerinnen</span>
-        <span class="card-tag">Technik</span>
-        <span class="card-tag">Fehlerkorrektur</span>
-        <span class="card-tag">Wassergewöhnung</span>
-      </div>
-      <a href="kontakt.html" style="display:inline-block;margin-top:24px;background:transparent;color:var(--coral);font-family:'Barlow',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:11px 24px;border-radius:8px;text-decoration:none;align-self:flex-start;border:1.5px solid var(--coral);">Buchen</a>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-
-
-<!-- SEGMENT 3: WARUM KRAFTSPORT -->
-<section class="scroll-segment scroll-segment--philosophie" id="seg-2">
+<!-- SEGMENT 2: WARUM KRAFTSPORT -->
+<section class="scroll-segment scroll-segment--philosophie" id="seg-1">
 <div class="seg-inner">
   <div class="kraftsport-phil" style="margin-bottom:0;">
     <div class="section-label">Warum Kraftsport?</div>
@@ -557,36 +519,49 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
 </div>
 </section>
 
-<!-- SEGMENT 4: WISSEN TEASER -->
-<section class="scroll-segment scroll-segment--wissen" id="seg-3">
-<div class="seg-inner">
-  <div class="wissen-card">
-    <div class="section-label">Wissen</div>
-    <div class="wissen-title">Trainings-ABC</div>
-    <div class="wissen-sub">Von Adaptation bis Volumen — kompaktes Trainingswissen für deinen Einstieg in den Kraftsport. Alle wichtigen Begriffe einfach erklärt.</div>
-    <div class="wissen-tags">
-      <span class="wissen-tag"><span class="wissen-tag-dot"></span>Trainingsplanung</span>
-      <span class="wissen-tag"><span class="wissen-tag-dot"></span>Technik & Ausführung</span>
-      <span class="wissen-tag"><span class="wissen-tag-dot"></span>Gesundheit ab 40</span>
-      <span class="wissen-tag"><span class="wissen-tag-dot"></span>Ernährung</span>
-    </div>
-    <a href="wissen.html" class="wissen-btn">Zum Trainings-ABC →</a>
-  </div>
-</div>
-</section>
 
-<!-- SEGMENT 5: CTA + FOOTER -->
-<section class="scroll-segment scroll-segment--cta" id="seg-4" style="height:auto;min-height:100vh;justify-content:space-between;flex-direction:column;">
-<div style="flex:1;display:flex;align-items:center;padding:40px;">
-  <div style="width:100%">
-  <div class="cta-block">
+<!-- SEGMENT 3: ANGEBOTE -->
+<section class="scroll-segment scroll-segment--angebote" id="seg-2">
+<div class="seg-inner">
+<div style="padding: 0;">
+  <div class="section-label">Angebote</div>
+  <div class="section-title">Was ich für dich tue.</div>
+  <div class="section-body">Zwei spezialisierte Programme — eines für den Kraftraum, eines für das Wasser. Beide mit persönlicher Begleitung und klarer Progression.</div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-title">Krafttraining</div>
+      <div class="card-body">Einführung in den Kraftsport mit Maschinen, Kabelzügen, Freihanteln und Stangen. Individuelle Begleitung in der Progression — speziell für Frauen ab 40.</div>
+      <div class="card-tags">
+        <span class="card-tag accent">Frauen ab 40</span>
+        <span class="card-tag">Technik</span>
+        <span class="card-tag">Geräteeinweisung</span>
+        <span class="card-tag">Einsteigerinnen</span>
+      </div>
+      <a href="kontakt.html" style="display:inline-block;margin-top:24px;background:transparent;color:var(--coral);font-family:'Barlow',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:11px 24px;border-radius:8px;text-decoration:none;align-self:flex-start;border:1.5px solid var(--coral);">Buchen</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Kraulschwimmen</div>
+      <div class="card-body">1:1 Schwimmtraining für Frauen — Kraulschwimmen von Grund auf erlernen. Von der Wassergewöhnung bis zur ersten Schwimmstrecke.</div>
+      <div class="card-tags">
+        <span class="card-tag accent">Einsteigerinnen</span>
+        <span class="card-tag">Technik</span>
+        <span class="card-tag">Fehlerkorrektur</span>
+        <span class="card-tag">Wassergewöhnung</span>
+      </div>
+      <a href="kontakt.html" style="display:inline-block;margin-top:24px;background:transparent;color:var(--coral);font-family:'Barlow',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:11px 24px;border-radius:8px;text-decoration:none;align-self:flex-start;border:1.5px solid var(--coral);">Buchen</a>
+    </div>
+  </div>
+  <!-- CTA unter den Karten -->
+  <div class="cta-block" style="margin-top:24px;">
     <div class="section-label">Bereit loszulegen?</div>
     <div class="section-title">Dein erstes Gespräch ist kostenlos.</div>
     <div class="section-body">Kein Druck, keine Verpflichtung — einfach kennenlernen und schauen, ob wir zusammenpassen.</div>
-    <a href="kontakt.html"><button class="btn-primary">Jetzt Termin buchen</button></a>
-  </div>
+    <a href="kontakt.html"><button class="btn-primary">Beratung buchen</button></a>
   </div>
 </div>
+</div>
+</section>
+
 
 
 <footer>
@@ -628,7 +603,7 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
   </div>
   <div class="footer-copy">© 2026 · Hamburg</div>
 </footer>
-</section>
+
 
 
 

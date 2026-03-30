@@ -49,19 +49,127 @@
   --white: #ffffff;
   --black: #111111;
 }
-body { font-family: 'Barlow', sans-serif; background: var(--gray-ice); color: var(--black); }
+html {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100%;
+}
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--gray-ice);
+  color: var(--black);
+  height: 100%;
+}
+
+/* SCROLL SEGMENT — Jeder Abschnitt = 100vh */
+.scroll-segment {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  height: 100vh;
+  min-height: 520px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.scroll-segment--hero {
+  display: block; /* hero hat eigenes Layout */
+  justify-content: unset;
+}
+
+/* SCROLL PROGRESS DOTS */
+.scroll-dots {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 10px 12px 14px;
+}
+.scroll-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0,0,0,.18);
+  border: 1.5px solid rgba(0,0,0,.25);
+  cursor: pointer;
+  transition: background .25s, transform .25s;
+}
+.scroll-dot.active {
+  background: var(--coral);
+  border-color: var(--coral);
+  transform: scale(1.35);
+}
+/* Dots hell auf dunklem Hintergrund */
+.dots-light .scroll-dot { background: rgba(255,255,255,.35); border-color: rgba(255,255,255,.5); }
+.dots-light .scroll-dot.active { background: #fff; border-color: #fff; }
+
+/* SCROLL HINT ARROW */
+.scroll-hint {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: .7;
+  animation: bounce 2s ease-in-out infinite;
+}
+.scroll-hint span {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.8);
+}
+.scroll-hint svg { color: rgba(255,255,255,.8); }
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+/* SEGMENT INNER — zentriertes Content-Padding */
+.seg-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* SEGMENT-SPEZIFISCHE HINTERGRÜNDE */
+.scroll-segment--angebote { background: #ffffff; }
+.scroll-segment--philosophie { background: var(--gray-ice); }
+.scroll-segment--wissen { background: #ffffff; }
+.scroll-segment--cta { background: var(--white); }
+
 
 /* NAV */
-nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; transition: background .3s; }
 .logo { display: flex; align-items: center; height: 36px; flex-shrink: 0; }
 .logo svg { height: 32px; width: auto; }
 .logo span { color: rgba(255,255,255,.6); }
 .nav-links { display: flex; gap: 28px; align-items: center; flex-shrink: 0; }
-.nav-links a { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.8); text-decoration: none; }
+.nav-links a { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.8); text-decoration: none; transition: color .3s; }
 .nav-cta { background: var(--white) !important; color: var(--coral) !important; padding: 8px 18px; border-radius: 6px; }
 
+/* Nav auf hellen Segmenten */
+nav.nav-light .nav-links a { color: var(--gray-dark); }
+nav.nav-light { background: rgba(255,255,255,.92); backdrop-filter: blur(8px); box-shadow: 0 1px 0 rgba(0,0,0,.07); }
+
+/* Scroll-Dots auf Mobile ausblenden */
+@media (max-width: 768px) {
+  .scroll-dots { display: none; }
+}
+
 /* HERO */
-.hero { position: relative; width: 100%; height: 100vh; min-height: 520px; background: var(--coral); display: flex; align-items: flex-end; overflow: hidden; }
+.hero { position: relative; width: 100%; height: 100%; min-height: 520px; background: var(--coral); display: flex; align-items: flex-end; overflow: hidden; }
 .hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .55; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(255,80,80,.75) 0%, rgba(255,80,80,.25) 55%, rgba(255,80,80,.05) 100%); }
 .hero-content { position: relative; z-index: 2; padding: 0 40px 60px; }
@@ -123,7 +231,7 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
   
 
   /* HERO */
-  .hero { height: 100svh; min-height: 600px; }
+  .hero { height: 100%; min-height: 600px; }
   .hero-content { padding: 0 20px 25px; }
   .hero-headline { font-size: 52px; }
 
@@ -337,6 +445,18 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
 
 </div>
 
+<!-- SCROLL PROGRESS DOTS -->
+<nav role="navigation" aria-label="Seitennavigation" class="scroll-dots" id="scrollDots">
+  <button class="scroll-dot active" data-index="0" title="Hero" aria-label="Zur Hero-Sektion"></button>
+  <button class="scroll-dot" data-index="1" title="Angebote" aria-label="Zu den Angeboten"></button>
+  <button class="scroll-dot" data-index="2" title="Warum Kraftsport" aria-label="Zur Philosophie"></button>
+  <button class="scroll-dot" data-index="3" title="Wissen" aria-label="Zum Wissensbereich"></button>
+  <button class="scroll-dot" data-index="4" title="Kontakt" aria-label="Zum Kontakt"></button>
+</nav>
+
+<!-- SEGMENT 1: HERO -->
+<section class="scroll-segment scroll-segment--hero" id="seg-0">
+
 <div class="hero">
   <video autoplay muted loop playsinline>
     <source src="video.mp4" type="video/mp4">
@@ -351,10 +471,21 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
       <div class="dosb-badge"><span class="dosb-badge-dot"></span><span class="dosb-badge-text">Hamburg</span></div>
     </div>
   </div>
+  <!-- Scroll-Hinweis -->
+  <div class="scroll-hint" aria-hidden="true">
+    <span>Scroll</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+  </div>
 </div>
 
+</section>
 
-<div class="section" style="background:#ffffff;">
+
+
+<!-- SEGMENT 2: ANGEBOTE -->
+<section class="scroll-segment scroll-segment--angebote" id="seg-1">
+<div class="seg-inner">
+<div style="padding: 0;">
   <div class="section-label">Angebote</div>
   <div class="section-title">Was ich für dich tue.</div>
   <div class="section-body">Zwei spezialisierte Programme — eines für den Kraftraum, eines für das Wasser. Beide mit persönlicher Begleitung und klarer Progression.</div>
@@ -383,8 +514,13 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
     </div>
   </div>
 </div>
+</div>
+</section>
 
-<div class="section" style="background:#ffffff;padding-top:0;">
+
+<!-- SEGMENT 3: WARUM KRAFTSPORT -->
+<section class="scroll-segment scroll-segment--philosophie" id="seg-2">
+<div class="seg-inner">
   <div class="kraftsport-phil" style="margin-bottom:0;">
     <div class="section-label">Warum Kraftsport?</div>
     <h2>Stärke ab 40 — genau jetzt richtig.</h2>
@@ -410,17 +546,40 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
       <a href="wissen.html" style="display:inline-block;background:transparent;color:var(--coral);border:1.5px solid var(--coral);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;padding:11px 24px;border-radius:8px;transition:opacity .18s;">Trainings-ABC →</a>
     </div>
   </div>
-  </div>
+</div>
+</section>
 
-
-<div class="cta-banner">
-  <div class="cta-block">
-  <div class="section-label">Bereit loszulegen?</div>
-  <div class="section-title">Dein erstes Gespräch ist kostenlos.</div>
-  <div class="section-body">Kein Druck, keine Verpflichtung — einfach kennenlernen und schauen, ob wir zusammenpassen.</div>
-  <a href="kontakt.html"><button class="btn-primary">Jetzt Termin buchen</button></a>
+<!-- SEGMENT 4: WISSEN TEASER -->
+<section class="scroll-segment scroll-segment--wissen" id="seg-3">
+<div class="seg-inner">
+  <div class="wissen-card">
+    <div class="section-label">Wissen</div>
+    <div class="wissen-title">Trainings-ABC</div>
+    <div class="wissen-sub">Von Adaptation bis Volumen — kompaktes Trainingswissen für deinen Einstieg in den Kraftsport. Alle wichtigen Begriffe einfach erklärt.</div>
+    <div class="wissen-tags">
+      <span class="wissen-tag"><span class="wissen-tag-dot"></span>Trainingsplanung</span>
+      <span class="wissen-tag"><span class="wissen-tag-dot"></span>Technik & Ausführung</span>
+      <span class="wissen-tag"><span class="wissen-tag-dot"></span>Gesundheit ab 40</span>
+      <span class="wissen-tag"><span class="wissen-tag-dot"></span>Ernährung</span>
+    </div>
+    <a href="wissen.html" class="wissen-btn">Zum Trainings-ABC →</a>
   </div>
 </div>
+</section>
+
+<!-- SEGMENT 5: CTA + FOOTER -->
+<section class="scroll-segment scroll-segment--cta" id="seg-4" style="height:auto;min-height:100vh;justify-content:space-between;flex-direction:column;">
+<div style="flex:1;display:flex;align-items:center;padding:40px;">
+  <div style="width:100%;max-width:1200px;margin:0 auto;">
+  <div class="cta-block">
+    <div class="section-label">Bereit loszulegen?</div>
+    <div class="section-title">Dein erstes Gespräch ist kostenlos.</div>
+    <div class="section-body">Kein Druck, keine Verpflichtung — einfach kennenlernen und schauen, ob wir zusammenpassen.</div>
+    <a href="kontakt.html"><button class="btn-primary">Jetzt Termin buchen</button></a>
+  </div>
+  </div>
+</div>
+
 
 <footer>
   <div class="footer-logo"><?xml version="1.0" encoding="UTF-8"?>
@@ -461,6 +620,7 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
   </div>
   <div class="footer-copy">© 2026 · Hamburg</div>
 </footer>
+</section>
 
 
 
@@ -470,6 +630,7 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
 
 
 <script>
+// ── MOBILE NAV ──────────────────────────────────────────
 function checkWidth() {
   var nav = document.getElementById('navLinks');
   var burger = document.getElementById('burger');
@@ -490,6 +651,48 @@ function toggleMobileNav() {
   var nav = document.getElementById('mobileNav');
   if (nav) nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
 }
+
+// ── SCROLL DOTS ──────────────────────────────────────────
+(function() {
+  const segments = document.querySelectorAll('.scroll-segment');
+  const dots = document.querySelectorAll('.scroll-dot');
+  const dotsNav = document.getElementById('scrollDots');
+  const mainNav = document.querySelector('nav:not(#scrollDots)');
+
+  // Klick auf Dot → Segment scrollen
+  dots.forEach(function(dot, i) {
+    dot.addEventListener('click', function() {
+      if (segments[i]) {
+        segments[i].scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // IntersectionObserver: Dots + Nav-Farbe aktiv halten
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        const idx = Array.from(segments).indexOf(entry.target);
+
+        // Dots updaten
+        dots.forEach(function(d, i) {
+          d.classList.toggle('active', i === idx);
+        });
+
+        // Auf Hero: Dots hell, Nav transparent/weiß
+        if (idx === 0) {
+          dotsNav.classList.add('dots-light');
+          if (mainNav) mainNav.classList.remove('nav-light');
+        } else {
+          dotsNav.classList.remove('dots-light');
+          if (mainNav) mainNav.classList.add('nav-light');
+        }
+      }
+    });
+  }, { threshold: 0.5 });
+
+  segments.forEach(function(seg) { observer.observe(seg); });
+})();
 </script>
 <div id="mobileNav" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#FF5C5C;z-index:9999;flex-direction:column;align-items:center;justify-content:center;gap:28px;">
   <button onclick="toggleMobileNav()" style="position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;color:#fff;font-size:40px;line-height:1;padding:0;">×</button>

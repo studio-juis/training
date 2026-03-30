@@ -345,11 +345,15 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
   .ks-intro-headline { font-size: 42px; }
   .ks-intro-text { font-size: 22px; line-height: 1.4; }
 }
+.mobile-break { display: none; }
+@media (max-width: 768px) {
+  .mobile-break { display: inline; }
+}
 .ks-phil-title {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800; text-transform: uppercase;
   font-size: 18px; color: var(--coral);
-  margin-bottom: 8px; letter-spacing: .04em;
+  margin-bottom: 8px; letter-spacing: .08em;
 }
 .ks-phil-text {
   font-size: 14px; font-weight: 300;
@@ -523,7 +527,7 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
   <div class="kraftsport-phil" style="margin-bottom:0;">
     <div class="ks-intro">
       <p class="ks-intro-headline">Stärke ab 40.<br>Genau jetzt richtig.</p>
-      <p class="ks-intro-text">Personalisiertes Training, spezialisiert entwickelt für die wandelnden Bedürfnisse von Frauen ab 40. Wir konzentrieren uns auf funktionelle Kraft, Knochengesundheit und Bewegungskompetenz.</p>
+      <p class="ks-intro-text">Personalisiertes Training, spezialisiert entwickelt für die wandelnden Bedürfnisse von Frauen ab 40.<span class="mobile-break"><br><br></span> Wir konzentrieren uns auf funktionelle Kraft, Knochengesundheit und Bewegungskompetenz.</p>
     </div>
     <div class="section-label">Warum Kraftsport?</div>
     <div class="ks-phil-grid">

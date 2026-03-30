@@ -96,18 +96,18 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(0,0,0,.18);
-  border: 1.5px solid rgba(0,0,0,.25);
+  background: var(--gray-dark);
+  border: 1.5px solid var(--gray-dark);
   cursor: pointer;
   transition: background .25s, transform .25s;
 }
 .scroll-dot.active {
-  background: var(--coral);
-  border-color: var(--coral);
+  background: var(--gray-dark);
+  border-color: var(--gray-dark);
   transform: scale(1.35);
 }
 /* Dots hell auf dunklem Hintergrund */
-.dots-light .scroll-dot { background: rgba(255,255,255,.35); border-color: rgba(255,255,255,.5); }
+.dots-light .scroll-dot { background: rgba(255,255,255,.6); border-color: rgba(255,255,255,.6); }
 .dots-light .scroll-dot.active { background: #fff; border-color: #fff; }
 .scroll-dot.active {
   background: var(--coral);
@@ -153,7 +153,7 @@ body {
 
 /* SEGMENT-SPEZIFISCHE HINTERGRÜNDE */
 .scroll-segment--angebote { background: var(--gray-ice); }
-.scroll-segment--philosophie { background: #ffffff; }
+.scroll-segment--philosophie { background: #ffffff; padding-top: 72px; }
 .scroll-segment--wissen { background: #ffffff; }
 .scroll-segment--cta { background: var(--white); }
 
@@ -171,9 +171,10 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 10; display: flex; ju
 nav.nav-light .nav-links a { color: var(--gray-dark); }
 nav.nav-light { background: rgba(255,255,255,.92); backdrop-filter: blur(8px); box-shadow: 0 1px 0 rgba(0,0,0,.07); }
 
-/* Scroll-Dots auf Mobile ausblenden */
 @media (max-width: 768px) {
-  .scroll-dots { display: none; }
+  html { scroll-snap-type: none; }
+  .scroll-segment { height: auto; min-height: unset; overflow: visible; }
+  .scroll-segment--hero { height: 100svh; }
 }
 
 /* HERO */
@@ -303,10 +304,10 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
 
 
 .kraftsport-phil {
-  background: var(--white);
-  border-radius: 14px; padding: 40px;
-  border: 1px solid #E8E8E8;
-  margin-bottom: 72px;
+  background: transparent;
+  border-radius: 0; padding: 0;
+  border: none;
+  margin-bottom: 0;
 }
 .kraftsport-phil .section-label { margin-bottom: 10px; }
 .kraftsport-phil h2 {
@@ -340,6 +341,10 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
   line-height: 1.1;
   max-width: 100%;
 }
+@media (max-width: 768px) {
+  .ks-intro-headline { font-size: 42px; }
+  .ks-intro-text { font-size: 22px; line-height: 1.4; }
+}
 .ks-phil-title {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800; text-transform: uppercase;
@@ -351,7 +356,7 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
   color: var(--black); line-height: 1.75;
 }
 @media (max-width: 768px) {
-  .kraftsport-phil { padding: 24px 20px; }
+  .kraftsport-phil { padding: 0; }
   .ks-phil-grid { grid-template-columns: 1fr; gap: 24px; }
 }
 

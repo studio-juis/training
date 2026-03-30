@@ -53,7 +53,9 @@ html {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100%;
+  scrollbar-width: none; /* Firefox */
 }
+html::-webkit-scrollbar { display: none; } /* Chrome/Safari */
 body {
   font-family: 'Barlow', sans-serif;
   background: var(--gray-ice);
@@ -99,6 +101,14 @@ body {
   cursor: pointer;
   transition: background .25s, transform .25s;
 }
+.scroll-dot.active {
+  background: var(--coral);
+  border-color: var(--coral);
+  transform: scale(1.35);
+}
+/* Dots hell auf dunklem Hintergrund */
+.dots-light .scroll-dot { background: rgba(255,255,255,.35); border-color: rgba(255,255,255,.5); }
+.dots-light .scroll-dot.active { background: #fff; border-color: #fff; }
 .scroll-dot.active {
   background: var(--coral);
   border-color: var(--coral);
@@ -446,13 +456,13 @@ footer { background: var(--gray-light); padding: 28px 40px; display: flex; justi
 </div>
 
 <!-- SCROLL PROGRESS DOTS -->
-<nav role="navigation" aria-label="Seitennavigation" class="scroll-dots" id="scrollDots">
+<div role="navigation" aria-label="Seitennavigation" class="scroll-dots" id="scrollDots">
   <button class="scroll-dot active" data-index="0" title="Hero" aria-label="Zur Hero-Sektion"></button>
   <button class="scroll-dot" data-index="1" title="Angebote" aria-label="Zu den Angeboten"></button>
   <button class="scroll-dot" data-index="2" title="Warum Kraftsport" aria-label="Zur Philosophie"></button>
   <button class="scroll-dot" data-index="3" title="Wissen" aria-label="Zum Wissensbereich"></button>
   <button class="scroll-dot" data-index="4" title="Kontakt" aria-label="Zum Kontakt"></button>
-</nav>
+</div>
 
 <!-- SEGMENT 1: HERO -->
 <section class="scroll-segment scroll-segment--hero" id="seg-0">
